@@ -22,7 +22,7 @@
 
 ## Hints
 ####Startup speed
-To speed up the startup process use ```$ vagrant up --no-provision``` (thanks to [caramba1337](https://github.com/caramba1337))
+To speed up the startup process use ```$ vagrant up --no-provision``` 
 
 
 ##TODO
