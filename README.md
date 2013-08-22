@@ -26,4 +26,5 @@ To speed up the startup process use ```$ vagrant up --no-provision```
 
 
 ##TODO
-Install capistrano for use in php deployment, and railsless-deploy and capistrano-ext gems
+* Install capistrano for use in php deployment, and railsless-deploy and capistrano-ext gems
+* Match php bundles on server (look at them using php -i)
