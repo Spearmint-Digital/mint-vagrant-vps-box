@@ -7,7 +7,7 @@
 * Clone this repository
 * Install submodules with ```git submodule update --init```
 * After running ```vagrant up``` the box is set up using Puppet
-* You should now be able to access PHP unser http://localhost:8080 or http://192.168.33.10 in your web browser
+* You should now be able to access PHP under http://localhost:8080 or http://192.168.33.10 in your web browser
 * You can put files in /shared/www
 
 ## Installed components
