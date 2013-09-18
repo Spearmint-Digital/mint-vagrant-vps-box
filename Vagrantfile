@@ -16,6 +16,9 @@ Vagrant::Config.run do |config|
   # network interface) by any external networks.
   config.vm.network :hostonly, "192.168.33.10"
 
+  # Hostname
+  config.vm.host_name = "vagrant.development.com"
+
   # Assign this VM to a bridged network, allowing you to connect directly to a
   # network using the host's network device. This makes the VM appear as another
   # physical device on your network.
@@ -31,6 +34,7 @@ Vagrant::Config.run do |config|
   # folder, and the third is the path on the host to the actual folder.
   config.vm.share_folder "s-www", 	"/www",		"./shared/www", 	:extra => 'dmode=777,fmode=777'
   config.vm.share_folder "s-logs", 	"/logs",	"./shared/logs",	:extra => 'dmode=777,fmode=777'
+  config.vm.share_folder "s-database", 	"/database",	"./shared/database",	:extra => 'dmode=777,fmode=777'
 
   config.vm.provision :puppet do |puppet|
        puppet.manifests_path = "puppet/manifests"

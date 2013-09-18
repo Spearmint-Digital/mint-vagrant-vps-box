@@ -59,7 +59,8 @@ class apache-setup {
         docroot_owner	=> 'vagrant',
         docroot_group	=> 'vagrant',
         logroot         => '/logs/httpd',
-        options         => 'FollowSymLinks MultiViews',
+        options         => 'FollowSymLinks All',
+        override        => 'All',
     }
 }
 
@@ -76,6 +77,7 @@ class mysql-setup {
         mysql_db => 'wordpress',
         mysql_user => 'wordpress',
         mysql_host => 'localhost',
+        mysql_db_init_query_file => '/database/latest.sql',
     }
 }
 
