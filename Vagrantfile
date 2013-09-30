@@ -36,9 +36,14 @@ Vagrant::Config.run do |config|
   config.vm.share_folder "s-logs", 	"/logs",	"./shared/logs",	:extra => 'dmode=777,fmode=777'
   config.vm.share_folder "s-database", 	"/database",	"./shared/database",	:extra => 'dmode=777,fmode=777'
 
+  # This shell provisioner installs librarian-puppet and runs it to install
+  # puppet modules. After that it just runs puppet
+  config.vm.provision :shell, :path => "puppet/shell/bootstrap.sh"
+    
+  # This runs the puppet provisioner, note modules are entirely handled by librarian-puppet
   config.vm.provision :puppet do |puppet|
        puppet.manifests_path = "puppet/manifests"
-       puppet.module_path = "puppet/modules"
+  #     puppet.module_path = "puppet/modules"
        puppet.options  = ['--verbose']
        puppet.options = "--hiera_config /vagrant/puppet/hiera.yaml"
   end

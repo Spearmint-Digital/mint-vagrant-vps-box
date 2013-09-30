@@ -11,7 +11,9 @@
 * You can put files in /shared/www
 
 ## Installed components
+Librarian puppet using method at https://github.com/purple52/librarian-puppet-vagrant/
 
+This then installs:
 * [apache](http://httpd.apache.org/) using puppet module (https://github.com/puppetlabs/puppetlabs-apache.git)
 * [git](http://git-scm.com/)
 * [iptables](http://wiki.centos.org/HowTos/Network/IPTables) using puppet module (https://github.com/puppetlabs/puppetlabs-firewall.git)
